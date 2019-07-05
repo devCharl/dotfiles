@@ -5,23 +5,23 @@ xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # brew install
-brew install zsh wget python python3 tree ffmpeg you-get youtube-dl tmux pandoc pdf2htmlex cmake trash-cli
+brew install zsh wget python python3 tree ffmpeg you-get youtube-dl tmux pandoc pdf2htmlex trash-cli
 chsh -s $(which zsh)
 
 # nodejs install
 # recommend nvm to manage the versions of node
 # python install
-pip3 install ipython scipy numpy matplotlib jupyter tensorflow keras scikit-learn
+pip3 install ipython scipy numpy matplotlib tensorflow keras scikit-learn --user
 # optional packages
-#pip3 install requests flask django pandas seaborn
+pip3 install requests flask django pandas seaborn --user
 
 # install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-cp zsh_dir/zshconfig ~/.zshrc
+cp zshconfiguration/zshconfig ~/.zshrc
 source ~/.zshrc
 
 # install vim config
-cp vim_config/vimrc ~/.vimrc
+cp vimconfiguration/vimrc ~/.vimrc
 
 # mkdir -p ~/.vim/colors/ && cp vim/colors/jellybeans.vim ~/.vim/colors/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -41,6 +41,6 @@ source ~/.zshrc
 
 #- zsh-autosuggestion
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-open ~/.zshrc
-add "plugins=(git zsh-autosuggestions)" 
+# open ~/.zshrc
+# add "plugins=(git zsh-autosuggestions)" 
 source ~/.zshrc
