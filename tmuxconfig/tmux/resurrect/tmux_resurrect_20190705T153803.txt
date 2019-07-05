@@ -1,0 +1,6 @@
+pane	dev	0	:[tmux]	1	:*	0	:/Users/charlesyin	0	zsh	:
+pane	dev	0	:[tmux]	1	:*	1	:/Users/charlesyin	0	zsh	:
+pane	dev	0	:[tmux]	1	:*	2	:/Users/charlesyin	0	zsh	:
+pane	dev	0	:[tmux]	1	:*	3	:/Users/charlesyin	1	zsh	:
+window	dev	0	1	:*	eddd,190x44,0,0{95x44,0,0,1,47x44,96,0,5,46x44,144,0[46x22,144,0,6,46x21,144,23,7]}
+state	dev	

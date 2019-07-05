@@ -1,0 +1,3 @@
+pane	dev	0	:zsh	1	:*	0	:/Users/charlesyin	1	zsh	:
+window	dev	0	1	:*	bcbe,190x44,0,0,1
+state	dev	
