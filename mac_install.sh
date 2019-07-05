@@ -13,7 +13,7 @@ chsh -s $(which zsh)
 # python install
 pip3 install ipython scipy numpy matplotlib jupyter tensorflow keras scikit-learn
 # optional packages
-pip3 install requests flask django pandas seaborn
+#pip3 install requests flask django pandas seaborn
 
 # install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
