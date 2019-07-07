@@ -30,11 +30,14 @@ vim +PluginInstall +qall
 # Plugins For zsh
 
 #- zsh-syntax-highlighting
+# Official Site https://github.com/zsh-users/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# open ~/.zshrc
 #add "plugins=( [plugins...] zsh-syntax-highlighting) " in the zshrc config files
 source ~/.zshrc
 
 #- zsh-autosuggestion
+# Official Site https://github.com/zsh-users/zsh-autosuggestions
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 # open ~/.zshrc
 # add "plugins=(git zsh-autosuggestions)" 
