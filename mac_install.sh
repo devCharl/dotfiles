@@ -14,7 +14,7 @@ brew cu -a
 # nodejs install
 # recommend nvm to manage the versions of node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-nvm use stable
+nvm install stable
 npm install hexo-cli -g
 # hexo is a tool writen by node to manage my blog
 # recommand to install hexo-deployer-git to public your blog on your gihub.io
