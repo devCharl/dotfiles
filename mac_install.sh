@@ -7,6 +7,10 @@ xcode-select --install
 # brew install
 brew install zsh wget python python3 tree ffmpeg you-get youtube-dl tmux pandoc pdf2htmlex trash-cli
 chsh -s $(which zsh)
+# brew management 
+brew tap buo/cask-upgrade
+brew cu -a
+
 
 # nodejs install
 # recommend nvm to manage the versions of node
