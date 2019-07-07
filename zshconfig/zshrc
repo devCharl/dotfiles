@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -136,10 +136,11 @@ alias killtmux='pkill -9 tmux'
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo'
 alias flush='sudo killall -HUP mDNSResponder'
 alias c=clear
-#export PATH=
+export PATH=/Users/charlesyin/Library/Python/2.7/bin:/Users/charlesyin/Library/Python/3.7/bin:$PATH
 
 ## Settings for Other Softwares in Shell
-alias svim="sudo vim"
+alias v='vim'
+alias sv="sudo vim"
 alias htop="sudo htop"
 alias pyoutube-dl="youtube-dl --proxy socks5://127.0.0.1:1086"
 alias bwg="ssh root@104.194.80.114 -p 29830"
@@ -153,3 +154,20 @@ alias py3=python3
 alias ipy3=ipython3
 alias ipy2=ipython2
 
+# Development
+## NVM Settings
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+## Blog 
+export BLOG_ROOT=/Users/charlesyin/Documents/Personl_Blog/blog
+
+## Python Dev
+export PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shim:$PATH
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# Keys
+## zsh-autosuggestions
+bindkey ',' autosuggest-accept

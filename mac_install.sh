@@ -17,11 +17,11 @@ pip3 install requests flask django pandas seaborn --user
 
 # install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-cp zshconfiguration/zshconfig ~/.zshrc
+cp zshconfig/zshrc ~/.zshrc
 source ~/.zshrc
 
 # install vim config
-cp vimconfiguration/vimrc ~/.vimrc
+cp vimconfig/vimrc ~/.vimrc
 
 # mkdir -p ~/.vim/colors/ && cp vim/colors/jellybeans.vim ~/.vim/colors/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
