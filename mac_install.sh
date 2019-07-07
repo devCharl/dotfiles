@@ -5,15 +5,20 @@ xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # brew install
-brew install zsh wget python python3 tree ffmpeg you-get youtube-dl tmux pandoc pdf2htmlex trash-cli
+brew install zsh git wget python python3 tree ffmpeg you-get youtube-dl tmux pandoc pdf2htmlex trash-cli
 chsh -s $(which zsh)
 # brew management 
 brew tap buo/cask-upgrade
 brew cu -a
 
-
 # nodejs install
 # recommend nvm to manage the versions of node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+nvm use stable
+npm install hexo-cli -g
+# hexo is a tool writen by node to manage my blog
+# recommand to install hexo-deployer-git to public your blog on your gihub.io
+
 # python install
 pip3 install ipython scipy numpy matplotlib tensorflow keras scikit-learn --user
 # optional packages
