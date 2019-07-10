@@ -50,3 +50,7 @@ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh
 # open ~/.zshrc
 # add "plugins=(git zsh-autosuggestions)" 
 source ~/.zshrc
+
+# git conf
+cp ./gitconf/gitconfig ~/.gitconfig
+cp ./gitconf/gitignore_file ~/.gitignore_file
