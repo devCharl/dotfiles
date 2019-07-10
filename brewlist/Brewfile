@@ -1,0 +1,60 @@
+tap "buo/cask-upgrade"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "rstacruz/backup"
+# SSL/TLS cryptography library
+brew "openssl"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Improved top (interactive process viewer)
+brew "htop"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# PDF to HTML converter
+brew "pdf2htmlex"
+# Interpreted, interactive, object-oriented programming language
+brew "python@2"
+# Simplified and community-driven man pages
+brew "tldr"
+# Terminal multiplexer
+brew "tmux"
+# Command-line interface to the freedesktop.org trashcan
+brew "trash-cli"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Extract, view, and test RAR archives
+brew "unrar"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Internet file retriever
+brew "wget"
+# Dumb downloader that scrapes the web
+brew "you-get"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
+# UNIX shell (command interpreter)
+brew "zsh"
+cask "appcleaner"
+cask "background-music"
+cask "calibre"
+cask "cheatsheet"
+cask "chromium"
+cask "firefox"
+cask "firefox-nightly"
+cask "google-chrome"
+cask "iina"
+cask "iterm2"
+cask "mactex"
+cask "spectacle"
+cask "transmission"
+cask "typora"
+cask "virtualbox"
+cask "virtualbox-extension-pack"
+cask "visual-studio-code"
+cask "youdaodict"

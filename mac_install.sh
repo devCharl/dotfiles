@@ -5,7 +5,7 @@ xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # brew install
-sh brew.sh
+brew bundle --file="./brewlist/Brewfile"
 chsh -s $(which zsh)
 # brew management 
 brew cu -a
