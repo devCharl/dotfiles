@@ -25,11 +25,11 @@ pip3 install requests pandas seaborn --user
 
 # install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-cp zshconfig/zshrc ~/.zshrc
+cp zshconf/zshrc ~/.zshrc
 source ~/.zshrc
 
 # install vim config
-cp vimconfig/vimrc ~/.vimrc
+cp vimconf/vimrc ~/.vimrc
 
 # mkdir -p ~/.vim/colors/ && cp vim/colors/jellybeans.vim ~/.vim/colors/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -54,3 +54,7 @@ source ~/.zshrc
 # git conf
 cp ./gitconf/gitconfig ~/.gitconfig
 cp ./gitconf/gitignore_file ~/.gitignore_file
+
+# tmux conf
+cp ./tmuxconf/tmux.conf ~/.tmux.conf
+cp -r ./tmuxconf/tmux ~/.tmux
