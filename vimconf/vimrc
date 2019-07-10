@@ -141,6 +141,8 @@ set backspace=indent,eol,start
 let mapleader = ' '
 let maplocalleader = ','
 
+" Call the system clipboard
+set clipboard=unnamed
 
 " System clipboard shorcut
 vmap <leader>y "+y
