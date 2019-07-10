@@ -173,8 +173,8 @@ eval "$(pyenv virtualenv-init -)"
 ## Settings for ic4c
 # icu4c is keg-only, which means it was not symlinked into /usr/local,
 # because macOS provides libicucore.dylib (but nothing else).
-echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc
+#echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
+#echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc
 export LDFLAGS="-L/usr/local/opt/icu4c/lib"
 export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
@@ -184,7 +184,7 @@ export PATH="/usr/local/opt/icu4c/bin:$PATH"
 # gnu-getopt is keg-only, which means it was not symlinked into /usr/local,
 # because macOS already provides this software and installing another version in
 # parallel can cause all kinds of trouble.
-echo 'export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"' >> ~/.zshrc
+#echo 'export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"' >> ~/.zshrc
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
 ## Settings for tesseract
@@ -192,12 +192,21 @@ export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 # If you need all the other supported languages, `brew install tesseract-lang`.
 
 
+## Settings for gpg
+
+## ==> libffi
+## libffi is keg-only, which means it was not symlinked into /usr/local,
+## because some formulae require a newer version of libffi.
+## 
+## For compilers to find libffi you may need to set:
+##   export LDFLAGS="-L/usr/local/opt/libffi/lib"
+## 
+## ==> unbound
+## To have launchd start unbound now and restart at startup:
+##   sudo brew services start unbound
+#
+
 # Keys
 ## zsh-autosuggestions
 bindkey ',' autosuggest-accept
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+
