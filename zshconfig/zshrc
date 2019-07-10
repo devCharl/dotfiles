@@ -10,7 +10,7 @@ export ZSH="/Users/charlesyin/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="ys"  #"half-life"  # robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -85,6 +85,8 @@ prompt_context(){} # hide username+hostname
 #		prompt_segment black defult "%(!.%F{yellow}%.}).$USER"
 #	fi
 # }
+
+# PROMPT=$'%{$purple%}%n%{$reset_color%} in %{$limegreen%}%~%{$reset_color%}$(ruby_prompt_info " with%{$fg[red]%} " v g "%{$reset_color%}")$vcs_info_msg_0_%{$orange%}%{$reset_color%} at %{$hotpink%}%* %{$orange%}λ%{$reset_color%} '
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -168,6 +170,34 @@ export PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shim:$PATH
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+## Settings for ic4c
+# icu4c is keg-only, which means it was not symlinked into /usr/local,
+# because macOS provides libicucore.dylib (but nothing else).
+echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+
+## Settings for gnu-getopt
+# gnu-getopt is keg-only, which means it was not symlinked into /usr/local,
+# because macOS already provides this software and installing another version in
+# parallel can cause all kinds of trouble.
+echo 'export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"' >> ~/.zshrc
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+
+## Settings for tesseract
+# This formula contains only the "eng", "osd", and "snum" language data files.
+# If you need all the other supported languages, `brew install tesseract-lang`.
+
+
 # Keys
 ## zsh-autosuggestions
 bindkey ',' autosuggest-accept
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
