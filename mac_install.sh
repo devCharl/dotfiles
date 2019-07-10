@@ -5,10 +5,9 @@ xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # brew install
-brew install zsh git wget python python3 tree ffmpeg you-get youtube-dl tmux pandoc pdf2htmlex trash-cli
+sh brew.sh
 chsh -s $(which zsh)
 # brew management 
-brew tap buo/cask-upgrade
 brew cu -a
 
 # nodejs install
