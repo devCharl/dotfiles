@@ -1,33 +1,34 @@
 # WARNING: PLEASE DO NOT USE THIS SCRIPT, JUST MANUALLY FOLLOW THE STEPS
 
 # basic development environment
-sudo apt install git gcc zsh -y
-chsh -s $(which zsh)
+sudo apt install tmux -y
+
+#chsh -s $(which zsh)
 
 # nodejs install
 # recommend nvm to manage the versions of node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-nvm install stable
-npm install hexo-cli -g
+#curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+#nvm install stable
+#npm install hexo-cli -g
 # hexo is a tool writen by node to manage my blog
 # recommand to install hexo-deployer-git to public your blog on your gihub.io
 
 # python install
-pip3 install ipython scipy numpy matplotlib tensorflow keras scikit-learn --user
+#pip3 install ipython scipy numpy matplotlib tensorflow keras scikit-learn --user
 # optional packages
-pip3 install requests pandas seaborn --user
+#pip3 install requests pandas seaborn --user
 
 # install oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-cp zshconf/zshrc ~/.zshrc
-source ~/.zshrc
+#sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+#cp zshconf/zshrc ~/.zshrc
+#source ~/.zshrc
 
 # install vim config
-cp vimconf/vimrc ~/.vimrc
+#cp vimconf/vimrc ~/.vimrc
 
 # mkdir -p ~/.vim/colors/ && cp vim/colors/jellybeans.vim ~/.vim/colors/
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#vim +PluginInstall +qall
 
 # Plugins For zsh
 
@@ -46,8 +47,8 @@ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh
 source ~/.zshrc
 
 # git conf
-cp ./gitconf/gitconfig ~/.gitconfig
-cp ./gitconf/gitignore_file ~/.gitignore_file
+#cp ./gitconf/gitconfig ~/.gitconfig
+#cp ./gitconf/gitignore_file ~/.gitignore_file
 
 # tmux conf
 cp ./tmuxconf/tmux.conf ~/.tmux.conf
