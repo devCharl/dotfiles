@@ -58,3 +58,7 @@ cp ./gitconf/gitignore_file ~/.gitignore_file
 # tmux conf
 cp ./tmuxconf/tmux.conf ~/.tmux.conf
 cp -r ./tmuxconf/tmux ~/.tmux
+
+# configure the iterm2 color
+git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git
+mv ~/Downloads/iTerm2-Color-Schemes ~/.iterm2-color-scheme
