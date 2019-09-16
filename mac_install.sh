@@ -27,6 +27,8 @@ pip3 install requests pandas seaborn --user
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 cp zshconf/zshrc ~/.zshrc
 source ~/.zshrc
+# update oh-my-zsh
+#upgrade_oh_my_zsh
 
 # install vim config
 cp vimconf/vimrc ~/.vimrc
