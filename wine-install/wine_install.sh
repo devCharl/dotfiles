@@ -3,6 +3,7 @@ brew install wine
 brew install winetricks
 
 # proxy on
+proxy_on # this is my terminel settings
 
 # plugins
 winetricks cmd
