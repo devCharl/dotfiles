@@ -113,8 +113,12 @@ prompt_context(){} # hide username+hostname
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Configurations for proxy
+#function proxy_on(){
+#	export ALL_PROXY=socks5://127.0.0.1:1086
+#}
+
 function proxy_on(){
-	export ALL_PROXY=socks5://127.0.0.1:1086
+    export ALL_PROXY=socks5://127.0.0.1:1081
 }
 
 function proxy_off(){
@@ -146,7 +150,7 @@ alias sv="sudo vim"
 alias scode='sudo code'
 alias htop="sudo htop"
 alias pyoutube-dl="youtube-dl --proxy socks5://127.0.0.1:1086 -f bestvideo+bestaudio"
-alias bwg="ssh root@104.194.80.114 -p 29830"
+alias bwg="ssh root@95.181.191.78 -p 29830"
 alias supermode='sudo nvram boot-args="serverperfmode=1 $(nvram boot-args 2>/dev/null | cut -f 2-)"'
 alias normalmode="sudo nvram boot-args="$(nvram boot-args 2>/dev/null | sed -e $'s/boot-args\t//;s/serverperfmode=1//')""
 alias checkmode="nvram boot-args"
