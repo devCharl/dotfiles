@@ -72,6 +72,15 @@ ZSH_THEME="ys"  #"half-life"  # robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git z zsh-syntax-highlighting zsh-autosuggestions)
 
+# g  = git
+# gst= git status
+# ga = git add
+# gp = git push
+# gc = git commit -v
+# gc!= git commit -v --amend
+# gaa= git add -all
+# gcmsg=git commit -m
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -149,8 +158,8 @@ alias v='vim'
 alias sv="sudo vim"
 alias scode='sudo code'
 alias htop="sudo htop"
-alias pyoutube-dl="youtube-dl --proxy socks5://127.0.0.1:1086 -f bestvideo+bestaudio"
-alias bwg="ssh root@95.181.191.78 -p 29830"
+alias pyoutube-dl="youtube-dl --proxy socks5://127.0.0.1:1081 -f bestvideo+bestaudio"
+alias bwg="ssh -o ServerAliveInterval=60 root@95.181.191.78 -p 29830"
 alias supermode='sudo nvram boot-args="serverperfmode=1 $(nvram boot-args 2>/dev/null | cut -f 2-)"'
 alias normalmode="sudo nvram boot-args="$(nvram boot-args 2>/dev/null | sed -e $'s/boot-args\t//;s/serverperfmode=1//')""
 alias checkmode="nvram boot-args"
@@ -174,9 +183,9 @@ export NVM_DIR="$HOME/.nvm"
 export BLOG_ROOT=/Users/charlesyin/Documents/Personl_Blog/blog
 
 ## Python Dev
-export PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shim:$PATH
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#export PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shim:$PATH
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 ## Settings for ic4c
 # icu4c is keg-only, which means it was not symlinked into /usr/local,
