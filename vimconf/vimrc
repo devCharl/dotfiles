@@ -138,8 +138,8 @@ set backspace=indent,eol,start
 " case.  <SPACE> is also a good choice. Note: you can of course have several “
 " personal modifier keys” simply by mapping a sequence, but the leader key is
 " handled more formally.
-let mapleader = ' '
-let maplocalleader = ','
+let mapleader = ','
+let g:mapleader = ','
 
 " Call the system clipboard
 set clipboard=unnamed
@@ -159,9 +159,9 @@ nmap <leader>P "+P
 
 
 " speed up commone operations
-nmap <leader>e :e
-nmap <leader>w :w<CR>
-nmap <leader>q :q<CR>
+nmap <leader>e :e!
+nmap <leader>w :w!<CR>
+nmap <leader>q :q!<CR>
 nmap <leader><Tab> :tabnew<CR>
 
 " jump to next quixfix error in location list
@@ -300,13 +300,9 @@ set modeline modelines=5
 
 " Hightlight cursor position
 "set cursorline  "cursorcolumn
-
-
-
 set fileencoding=utf8 fileencodings=utf8,gb2312,big5
 set fileformat=unix fileformats=unix,dos,mac
-
-
+set encoding=utf-8
 set showmatch     " set show matching parenthesis
 
 " Turn on hidden.  Don’t worry about the name. What this does is allow Vim to
@@ -315,7 +311,6 @@ set showmatch     " set show matching parenthesis
 " * When a background buffer becomes current again, marks and undo-history
 " are remembered.
 set hidden
-
 
 " Keep a longer history By default, Vim only remembers the last 20 commands
 " and search patterns entered. It’s nice to boost this up:
@@ -334,13 +329,11 @@ set scrolloff=3
 " Make mouse scrolling work
 set mouse=a
 
-
+" Set lines number
 set number
 if exists("+relativenumber")
     set relativenumber
 endif
-
-
 
 " Stifle many interruptive prompts: The “Press ENTER or type command to
 " continue” prompt is jarring and usually unnecessary. You can shorten
@@ -349,33 +342,39 @@ set shortmess=atI
 " See :help shortmess for the breakdown of what this changes. You can also
 " pare things down further if you like.
 
-
-
 " Trigger tag auto hightlight every second. Note this is done by writing swap
 " file to trigger the CursorHold event. Low values will incur more disk I/O.
 set updatetime=1000
 
-
 " show softwarpped continuing line
 set showbreak=…
-
 
 if exists("+autochdir")
     " change working directory to the one containing the file opened
     set autochdir
 endif
 
-
 """ tohtml mode
 " use CSS stylesheet and XHTML for TOhtml
 let html_use_css = 1
 let use_xhtml = 1
 
-
 """ Syntastic plugin
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--max-line-length=120'
-
+let g:syntastic_error_symbol = '✗'	"set error or warning signs
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_highlighting = 0
+"let g:syntastic_python_checker="flake8,pyflakes,pep8,pylint"
+let g:syntastic_python_checkers=['pyflakes']
+"highlight SyntasticErrorSign guifg=white guibg=black
+let g:syntastic_cpp_include_dirs = ['/usr/include/']
+let g:syntastic_cpp_remove_include_errors = 1
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
+let g:syntastic_enable_balloons = 1	"whether to show balloons
 
 """ slime plugin
 let g:slime_target = "tmux"
