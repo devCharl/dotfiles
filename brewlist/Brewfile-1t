@@ -1,0 +1,66 @@
+tap "buo/cask-upgrade"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+# Fast, simple and clean video downloader
+brew "annie"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Improved top (interactive process viewer)
+brew "htop"
+# SSL/TLS cryptography library
+brew "openssl"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# PDF to HTML converter
+brew "pdf2htmlex"
+# Interpreted, interactive, object-oriented programming language
+brew "python@2"
+# Simplified and community-driven man pages
+brew "tldr"
+# Terminal multiplexer
+brew "tmux"
+# Command-line interface to the freedesktop.org trashcan
+brew "trash-cli"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Extract, view, and test RAR archives
+brew "unrar"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Internet file retriever
+brew "wget"
+# Run Windows applications without a copy of Microsoft Windows
+brew "wine"
+# Download and install various runtime libraries
+brew "winetricks"
+# Dumb downloader that scrapes the web
+brew "you-get"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
+# UNIX shell (command interpreter)
+brew "zsh"
+cask "anki"
+cask "appcleaner"
+cask "calibre"
+cask "cheatsheet"
+cask "firefox"
+cask "google-chrome"
+cask "ichm"
+cask "iina"
+cask "imageoptim"
+cask "intel-power-gadget"
+cask "iterm2"
+cask "knotes"
+cask "mactex"
+cask "qt-creator"
+cask "spectacle"
+cask "typora"
+cask "virtualbox"
+cask "virtualbox-extension-pack"
+cask "visual-studio-code"
