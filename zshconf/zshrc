@@ -166,6 +166,7 @@ alias checkmode="nvram boot-args"
 
 ## Settings for Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=true
+alias brewbackup='brew bundle dump --describe --force --file="~/Documents/Summary/dotfiles/brewlist/Brewfile-1t"'
 
 ## development for python
 alias py2=python2
